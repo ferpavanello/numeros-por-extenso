@@ -1,4 +1,5 @@
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from controle import controle
 
 
 class S(BaseHTTPRequestHandler):
@@ -10,6 +11,7 @@ class S(BaseHTTPRequestHandler):
     def do_GET(self):
         url = self.path
         print(url)
+        print(controle(1))
         self._set_headers()
         self.wfile.write("<html><head><title>Teste</title></head>")
         self.wfile.write("<body><p>This is a test.</p>")
