@@ -5,13 +5,15 @@ from centenas import pega_centena
 
 def controle(req):
     tamanho = len(req)
-    escrita = ""
+    retorno = ""
 
     if tamanho == 1:
-        escrita = pega_unidade(req)
+        retorno = pega_unidade(req)
     elif tamanho == 2:
-        escrita = pega_dezena(req)
+        retorno = pega_dezena(req)
     elif tamanho == 3:
-        escrita = pega_centena(req)
+        retorno = pega_centena(req)
+    else:
+        retorno = pega_milhar(req)
 
     print(escrito)

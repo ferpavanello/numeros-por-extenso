@@ -6,17 +6,17 @@ def pega_centena(req):
     ret_centena = ""
 
     if req[1:2] == "00":
-        return pontuais(req[0])
+        ret_centena = pontuais(req[0])
 
     elif req[2] == "0":
         if req[0] == "1":
             ret_centena += "cento"
         else:
             ret_centena += pontuais(req[0])
-            ret_centena += " e "
-            ret_centena += pega_unidade(req[2])
+        ret_centena += " e "
+        ret_centena += pega_unidade(req[2])
 
-    elif req[2] == "0":
+    else:
         if req[0] == "1":
             ret_centena += "cento"
         else:
@@ -24,7 +24,8 @@ def pega_centena(req):
 
         ret_centena += " e "
         ret_centena += pega_dezena(req[1:2])
-        return ret_centena
+
+    return ret_centena
 
 
 def pontuais(param):
