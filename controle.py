@@ -5,12 +5,16 @@ from milhares import pega_milhar
 
 
 def controle(req):
-    tamanho = len(req)
+    if req == "favicon.ico":
+        return ""
+
     retorno = ""
 
     if req[0] == "-":
         retorno += "menos "
         req = req[1:]
+
+    tamanho = len(req)
 
     if tamanho == 1:
         retorno += pega_unidade(req)
