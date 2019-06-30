@@ -12,9 +12,12 @@ class S(BaseHTTPRequestHandler):
         url = self.path
         self._set_headers()
         self.wfile.write(
+            bytes("<head><meta charset='utf-8' /></head>", "utf-8"))
+        self.wfile.write(
             bytes("<html><head><title>Teste</title></head>", "utf-8"))
         self.wfile.write(
             bytes(f"<body><p>{controle(url[1:])}</p>", "utf-8"))
+        self.wfile.write(bytes("</html>", "utf-8"))
 
 
 def run(server_class=HTTPServer, handler_class=S, port=3000):

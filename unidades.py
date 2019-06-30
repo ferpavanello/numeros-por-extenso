@@ -6,7 +6,7 @@ def pega_unidade(req):
     elif req == "2":
         return "dois"
     elif req == "3":
-        return "tres"
+        return "três"
     elif req == "4":
         return "quatro"
     elif req == "5":
