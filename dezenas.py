@@ -5,7 +5,7 @@ def pega_dezena(req):
     ret_dezena = ""
 
     if req[1] == "0":
-        ret_dezena = pontuais(req[1])
+        ret_dezena = pontuais(req[0])
     elif req[0] == "1":
         ret_dezena = especifico_dez(req[1])
     else:

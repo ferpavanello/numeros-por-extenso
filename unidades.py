@@ -1,19 +1,21 @@
 def pega_unidade(req):
-    if req == 1:
+    if req == "0":
+        return "zero"
+    elif req == "1":
         return "um"
-    elif req == 2:
+    elif req == "2":
         return "dois"
-    elif req == 3:
+    elif req == "3":
         return "tres"
-    elif req == 4:
+    elif req == "4":
         return "quatro"
-    elif req == 5:
+    elif req == "5":
         return "cinco"
-    elif req == 6:
+    elif req == "6":
         return "seis"
-    elif req == 7:
+    elif req == "7":
         return "sete"
-    elif req == 8:
+    elif req == "8":
         return "oito"
-    elif req == 9:
+    elif req == "9":
         return "nove"

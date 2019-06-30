@@ -1,4 +1,4 @@
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, HTTPServer
 from controle import controle
 
 
@@ -10,14 +10,14 @@ class S(BaseHTTPRequestHandler):
 
     def do_GET(self):
         url = self.path
-        print(url)
-        print(controle(1))
         self._set_headers()
-        self.wfile.write("<html><head><title>Teste</title></head>")
-        self.wfile.write("<body><p>This is a test.</p>")
+        self.wfile.write(
+            bytes("<html><head><title>Teste</title></head>", "utf-8"))
+        self.wfile.write(
+            bytes(f"<body><p>{controle('55118')}</p>", "utf-8"))
 
 
-def run(server_class=HTTPServer, handler_class=S, port=7000):
+def run(server_class=HTTPServer, handler_class=S, port=3000):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print('Starting httpd...')

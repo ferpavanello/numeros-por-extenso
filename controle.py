@@ -1,6 +1,7 @@
 from unidades import pega_unidade
 from dezenas import pega_dezena
 from centenas import pega_centena
+from milhares import pega_milhar
 
 
 def controle(req):
@@ -19,4 +20,4 @@ def controle(req):
     else:
         retorno += pega_milhar(req)
 
-    print(retorno)
+    return retorno
