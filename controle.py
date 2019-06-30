@@ -10,6 +10,7 @@ def controle(req):
 
     if req[0] == "-":
         retorno += "menos "
+        req = req[1:]
 
     if tamanho == 1:
         retorno += pega_unidade(req)

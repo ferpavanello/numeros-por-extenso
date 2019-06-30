@@ -14,7 +14,7 @@ class S(BaseHTTPRequestHandler):
         self.wfile.write(
             bytes("<html><head><title>Teste</title></head>", "utf-8"))
         self.wfile.write(
-            bytes(f"<body><p>{controle('55118')}</p>", "utf-8"))
+            bytes(f"<body><p>{controle(url[1:])}</p>", "utf-8"))
 
 
 def run(server_class=HTTPServer, handler_class=S, port=3000):
