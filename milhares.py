@@ -8,15 +8,12 @@ def pega_milhar(req):
 
     if len(req) == 4:
         ret_milhar += especifico_cem(req[0])
-
         if req[1:] != "000":
             if req[2:] == "00":
-                ret_milhar += " e "
+                ret_milhar += " e"
 
-            elif "0" in (req[3:], req[1]) or req[1:3] == "00" or "0" not in req:
-                ret_milhar += " "
+            ret_milhar += f" {pega_centena(req[1:])}"
 
-            ret_milhar += pega_centena(req[1:])
     else:
         ret_milhar += f"{pega_dezena(req[:2])} mil"
 
