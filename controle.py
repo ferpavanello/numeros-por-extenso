@@ -13,6 +13,11 @@ def controle(req):
 
     tamanho = len(req)
 
+    if tamanho > 1:
+        while req[0] == "0":
+            req = req[1:]
+            tamanho = len(req)
+
     if tamanho == 1:
         retorno += pega_unidade(req)
     elif tamanho == 2:
