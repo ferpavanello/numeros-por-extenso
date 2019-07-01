@@ -8,10 +8,13 @@ def pega_dezena(req):
         ret_dezena = pontuais(req[0])
     elif req[0] == "1":
         ret_dezena = especifico_dez(req[1])
+
+    elif req[0] == "0":
+        ret_dezena += pega_unidade(req[1])
+
     else:
         ret_dezena += pontuais(req[0])
-        ret_dezena += " e "
-        ret_dezena += pega_unidade(req[1])
+        ret_dezena += f" e {pega_unidade(req[1])}"
 
     return ret_dezena
 
