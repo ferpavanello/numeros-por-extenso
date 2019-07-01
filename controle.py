@@ -5,9 +5,6 @@ from milhares import pega_milhar
 
 
 def controle(req):
-    if req == "favicon.ico":
-        return ""
-
     retorno = ""
 
     if req[0] == "-":

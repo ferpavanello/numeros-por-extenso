@@ -20,12 +20,9 @@ def pega_milhar(req):
         if req[1:] != "0000" and req[2:] != "000":
 
             if req[3:] == "00":
-                ret_milhar += " e "
+                ret_milhar += " e"
 
-            else:
-                ret_milhar += " "
-
-            ret_milhar += pega_centena(req[2:])
+            ret_milhar += f" {pega_centena(req[2:])}"
 
     return ret_milhar
 
